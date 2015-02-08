@@ -1,0 +1,155 @@
+/* Lindsay Lambert PWA2 Week 1 App Setup */
+
+
+/* Beginning of Body Styling  */
+
+body {
+
+	font-family: Avenir, Geneva, Helvetica;
+	font-size: 18px;
+	background-color: #e5d7b6;
+	width: 960px;
+	border: 45px solid #b25538;
+	color: #352f22;
+	margin: 20px auto;
+	padding: 10px;
+	
+}	 
+
+/* Styling Links */
+
+a:link {
+	color: #352f22;
+	text-decoration: none;
+}
+a:visited {
+	color: #c57a72;
+}
+a:hover {
+	color: #f6f2e7;
+	text-decoration: underline;
+	background-color: rgba(246,242,231, 0.4);
+}
+a:active {
+	color: #b23358;
+	text-decoration: underline;
+}
+
+/* Styling H1 Headings */
+
+h1 { 
+	
+	font-family: Harrington, 'Apple Chancery', 'Monotype Corsiva';
+	font-size: 40px;
+	margin: 5px;
+	padding: 5px;
+	
+}
+
+/* H2 Headings Styling */
+
+h2 {
+
+	font-size: 26px;
+	margin: 5px;
+	padding: 5px;
+
+}
+
+/* Styling of Navigation */
+
+nav {
+
+	font-size: 18px;
+	margin: 10px;
+	padding: 3px;
+	
+}	
+
+/* Styling of All Buttons in Site - So Far */
+
+button {
+
+	font-family: Avenir, Geneva, Helvetica;
+	background-color: #c57a72;
+	color: #352f22;
+	width: 200px;
+	height: 35px;
+	text-shadow: 0px 1px 1px #ffffff;
+	font-size: 18px;
+	margin: 5px;
+	padding: 5px;
+	
+}	
+
+/* Styling of Sign Up Button Only */
+
+#signUpButton {
+	
+	width: 200px;
+	height: 30px;
+	text-shadow: 0px 1px 1px #ffffff;
+	border: 1px solid #c57a72;
+}	
+
+/* Styling for the Registration Form Only */
+
+form.registration {
+
+	width: 650px;
+	height: 300px;
+	background-color: #c57a72;
+	color: #352f22;
+	margin: 5px;
+	padding: 5px;	
+	
+}	
+
+/* Styling of List Items - So Far */	
+
+li {
+
+	list-style: inside circle;
+	
+}	
+
+/* Styling Images and Logo */
+
+img {
+
+	position: absolute;
+	left: 750px;
+	
+}	
+
+/* Styled an Image to Remain as Default */
+
+figure img {
+
+	position: static;
+
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
