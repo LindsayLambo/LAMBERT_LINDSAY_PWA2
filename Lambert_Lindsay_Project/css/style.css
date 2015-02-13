@@ -131,10 +131,31 @@ figure img {
 }	
 
 
+#accordion {
+	width: 600px;
+	height: 400px;
+	background-color: #c57a72;
+	color: #352f22;
+	margin: 10px;
+}
+
+
+.tabs li {
+	width: 600px;
+	height: 60px;
+	display: inline;
+	padding: 15px;
+	margin: 10px;
+}
 
 
 
-
+.tabs li a {
+	background-color: #352f22;
+	color: #c57a72;
+	text-decoration: none;
+	list-style-type: none;
+}
 
 
 
