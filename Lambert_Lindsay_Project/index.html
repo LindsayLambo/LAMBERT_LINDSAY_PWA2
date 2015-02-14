@@ -1,6 +1,7 @@
-<!-- Lindsay Lambert PWA2 Week 1 Project 1 -->
+<!doctype html> 
 
-<!doctype html>  
+<!-- Lindsay Lambert PWA2 Week 2 Project  -->
+ 
 
 <!--
 	This is the main index of the application
@@ -55,10 +56,8 @@
 		<nav>
 			<ul>
 				<li><a href="index.html">Home</a></li>
-				<li><a href="dashboard.html">Dashboard</a></li>
 				<li><a href="agencies.html">Agencies</a></li>
 				<li><a href="adoptions.html">Adoptions</a></li>
-				<li><a href="projects.html">Projects</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 		</nav>
@@ -69,15 +68,16 @@
 										
 		<p class="signIn">Sign In</p>
 		
-		<form class="signIn" action="http://www.pcpets.com/login.php">
-		
-			<p>Username:
-				<input type="text" name="username" size="15" maxlength="40" />
-			</p>
+		<div id="login">
+        	<form class="signIn" action="http://www.pcpets.com/login.php">
+				
+			<label>Username: </label>
+				<input type="text" name="signinButton" id="username" class="masterTooltip" title="Please Enter A 				Username" required /> <br>
 			
-			<p>Password:
-				<input type="text" name="password" size="15" maxlength="40" />
-			</p>
+			
+			<label>Password: </label>
+				<input type="text" name="signinButton" id="password" class="masterTooltip" title="Please Enter a Password" required  /> <br>
+			<input name="signinButton" type="button" id="signinButton" value="Sign In" />
 			
 		</form>
 	
@@ -87,7 +87,7 @@
 		
 		<form action="registration.html">
 			<button>Register Now!</button>
-			<input type="hidden" name="registration" value="register" />
+			<input type="button" name="registration" title="Join Today!" class="masterTooltip" value="register" />
 		</form>
 	
 	
@@ -98,7 +98,8 @@
 				
 
 		<!-- jquery -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="js/plugins/jquery-1.11.2.min.js"></script>
 		<!-- plugins -->
 
 	

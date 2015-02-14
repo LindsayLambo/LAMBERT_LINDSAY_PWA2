@@ -1,6 +1,7 @@
-<!-- Lindsay Lambert PWA2 Week 1 Project 1 -->
-
 <!doctype html>
+
+<!-- Lindsay Lambert PWA2 Week 2 Project  -->
+
 
 <html lang="en">
 	
@@ -57,6 +58,58 @@
 				</ul>
 			
 		</nav>
+        
+<!-- ______________________________________________________________________________________________________________ -->
+				<!--Modal-->
+<!-- ______________________________________________________________________________________________________________ -->        
+        <div id="overlay">
+ 			<div id ="modal">
+        	<span class ="x">X</span>
+        	<h3 class="header">Add New Project</h3>
+            	<div id="add">
+                <p><a href="3" class="clickModal">Add New Project</a></p>
+                </div> 
+               
+            	<form id="addform">
+                	<label>Project Name: </label>
+                    	<input name="projName" type="text" id="projName"/>
+<br>
+					<label>Project Description: </label>
+                    	<input name="projDesc" type="text" id="projDesc" /> <br>
+                    
+                    <label>Project Due Date: </label>
+                    	<input name="projDue" type="text" id="projDue" /> <br>
+                        
+                     <label for="status">Select Status:</label>
+<br>
+
+					 <label class="myStatus">
+                     <input type="radio" name="status" id="urgent">URGENT!</label>
+                     
+                     <label class="myStatus">
+                     <input type="radio" name="status" id="normal">Normal</label>
+                     
+                     <label class="myStatus">
+                     <input type="radio" name="status" id="delayed">Delayed!</label>
+                     
+                     <label class="myStatus">
+                     <input type="radio" name="status" id="complete">COMPLETE</label><br>
+                     
+                     <input name="addbutton" type="button" id="addbutton" value="Add" />
+                  
+                  </form>   
+                     
+                                                          
+        
+        	
+            
+        </div>
+        
+     </div>   
+        
+        
+ </div>
+        
 <!-- ______________________________________________________________________________________________________________ -->
 				<!--MY PROJECTS-->
 <!-- ______________________________________________________________________________________________________________ -->
@@ -70,7 +123,7 @@
 		</ul>
 		
 		<div class="entry">
-			<figure><img src="images/millie.jpg" alt="Millie Cat" />
+			<figure><img src="images/millie.jpg" alt="Millie Cat" /> <br>
 			<figcaption>Sweet Millie</figcaption>
 			</figure>
 		</div>
