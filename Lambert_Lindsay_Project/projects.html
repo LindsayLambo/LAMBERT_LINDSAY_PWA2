@@ -35,8 +35,22 @@
 	
 		<p><img src="images/logo-pc.png" class="logo" alt=" PC Logo" /></p>
 		
+<!-- ______________________________________________________________________________________________________________ -->
+				<!--SIGN OUT BUTTON-->
+<!-- ______________________________________________________________________________________________________________ -->
+
+						
+		<form action="index.html">
+			<button>Sign Out</button>
+			<input type="hidden" name="signout" value="signout" />
+		</form>
+				
 		
-		
+<!-- ______________________________________________________________________________________________________________ -->
+				<!--MAIN HEADERS-->
+<!-- ______________________________________________________________________________________________________________ -->        
+        
+        
 		
 		<h1 id="head1">PC Pet Charities & Projects</h1>
 		
@@ -49,12 +63,7 @@
 		<nav>
 			
 				<ul>
-					<li><a href="index.html">Home</a></li>
 					<li><a href="dashboard.html">Dashboard</a></li>
-					<li><a href="agencies.html">Agencies</a></li>
-					<li><a href="adoptions.html">Adoptions</a></li>
-					<li><a href="projects.html">Projects</a></li>
-					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			
 		</nav>
@@ -63,22 +72,26 @@
 				<!--Modal-->
 <!-- ______________________________________________________________________________________________________________ -->        
         <div id="overlay">
- 			<div id ="modal">
-        	<span class ="x">X</span>
-        	<h3 class="header">Add New Project</h3>
-            	<div id="add">
-                <p><a href="3" class="clickModal">Add New Project</a></p>
+ 			<div id="add">
+            	<h3 class="header">Add New Project</h3>
+            	<p><a href="3" class="clickModal">Add New Project</a></p>
+            </div>    
+            	
+        	
+            	
+                <div id ="modal">
+                <span class ="x">X</span>
                  
                
             	<form id="addform">
                 	<label>Project Name: </label>
-                    	<input name="projName" type="text" id="projName"/>
+                    	<input name="projectName" type="text" id="projectName"/>
 <br>
 					<label>Project Description: </label>
-                    	<input name="projDesc" type="text" id="projDesc" /> <br>
+                    	<input name="projectDescription" type="text" id="projectDescription" /> <br>
                     
                     <label>Project Due Date: </label>
-                    	<input name="projDue" type="text" id="projDue" /> <br>
+                    	<input name="projectDue" type="text" id="projectDue" /> <br>
                         
                      <label for="status">Select Status:</label>
 <br>
@@ -130,16 +143,7 @@
 		
 		
 		
-<!-- ______________________________________________________________________________________________________________ -->
-				<!--SIGN OUT BUTTON-->
-<!-- ______________________________________________________________________________________________________________ -->
 
-						
-		<form action="index.html">
-			<button>Sign Out</button>
-			<input type="hidden" name="signout" value="signout" />
-		</form>
-		
 <!-- ______________________________________________________________________________________________________________ -->
 				<!--JQUERY AND JAVASCRIPT-->	
 <!-- ______________________________________________________________________________________________________________ -->

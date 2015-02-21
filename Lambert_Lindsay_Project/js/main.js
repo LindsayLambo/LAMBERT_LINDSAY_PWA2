@@ -54,8 +54,8 @@
 		$(this).attr('title', $(this).data('tipText'));
 		$('.tooltip').remove();
 	}).mousemove(function(e) {
-		var mousex = e.pagex + 20;
-		var mousey = e.pagey + 10;
+		var mousex = e.pageX + 20;
+		var mousey = e.pageY + 10;
 		$('.tooltip').css({ top: mousey, left: mousex })
 });
 		
