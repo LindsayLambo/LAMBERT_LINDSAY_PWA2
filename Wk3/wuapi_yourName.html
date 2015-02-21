@@ -89,39 +89,91 @@ $(document).ready(function($){
 	
 <!--This is an example of how to embed Geolookup. Use your own API key and city location-->	
 	$.ajax({ 
-		url : "http://api.wunderground.com/api/YOURAPIKEY/geolookup/conditions/q/NC/Winston-Salem.json",
+		url : "http://api.wunderground.com/api/eebc04e7b95df16a/geolookup/conditions/q/NC/Winston-Salem.json",
 		dataType : "jsonp", 
           success : function(parsed_json) { 
               var location = parsed_json['location']['city']; 
               var temp_f = parsed_json['current_observation']['temp_f'];
-                  $(".three").html("Current temperature in " + location + " is: " + temp_f+"ºF");
+                  $("").html("Current temperature in " + location + " is: " + temp_f+"ºF");
           } 
 	});
-});  //Closes Doc Ready Function
+	
+
 
 	
 <!--Use your own API key and city location-->
 <!--1.Embed the WU 3-day forecast summary feature.-->
 <!--Your Code Here-->
+$.ajax({ 
+		url : "http://api.wunderground.com/api/eebc04e7b95df16a/geolookup/conditions/q/NC/Winston-Salem.json",
+		dataType : "jsonp", 
+          success : function(parsed_json) { 
+              var location = parsed_json['location']['city']; 
+              var aveHum = parsed_json['current_observation']['avehumidity'];
+                  $(".three").html("The average humidity in " + location + " is: " + aveHum);
+          } 
+	});
 
 
 
 <!--2.Embed the WU 10-day forecast summary feature.-->	
 <!--Your Code Here-->
+
+$.ajax({ 
+		url : "http://api.wunderground.com/api/eebc04e7b95df16a/geolookup/conditions/q/NC/Winston-Salem.json",
+		dataType : "jsonp", 
+          success : function(parsed_json) { 
+              var location = parsed_json['location']['city']; 
+              var conditions = parsed_json['forecastday']['conditions'];
+                  $(".tenDay").html("Current 10-day forecast in " + location + " is: " + tenFore);
+          } 
+	});
 	
 
 <!--3.Embed the WU Hourly 1-day forecast feature.-->	
 <!--Your Code Here-->
 
+$.ajax({ 
+		url : "http://api.wunderground.com/api/eebc04e7b95df16a/geolookup/conditions/q/NC/Winston-Salem.json",
+		dataType : "jsonp", 
+          success : function(parsed_json) { 
+              var location = parsed_json['location']['city']; 
+              var temp_f = parsed_json['current_observation']['temp_f'];
+                  $(".hourFore").html("Current temperature in " + location + " is: " + temp_f+"ºF");
+          } 
+	});
+
 
 
 <!--4.Embed the WU Astronomy feature.-->	
 <!--Your Code Here-->
-	
+$.ajax({ 
+		url : "http://api.wunderground.com/api/eebc04e7b95df16a/geolookup/conditions/q/NC/Winston-Salem.json",
+		dataType : "jsonp", 
+          success : function(parsed_json) { 
+              var location = parsed_json['location']['city']; 
+              var sunRise = parsed_json['sunrise.minute']['sunRise'];
+                  $(".astro").html("The sunrise in " + location + " will occur at: " + sunRise);
+          } 
+	});
+
 
 <!--5.Embed the WU Almanac for today feature.-->	
 <!--Your Code Here-->
 
+$.ajax({ 
+		url : "http://api.wunderground.com/api/eebc04e7b95df16a/geolookup/conditions/q/NC/Winston-Salem.json",
+		dataType : "jsonp", 
+          success : function(parsed_json) { 
+              var location = parsed_json['location']['city']; 
+              var temp_f = parsed_json['current_observation']['temp_f'];
+                  $(".almanac").html("Current temperature in " + location + " is: " + temp_f+"ºF");
+          } 
+	});
+
+
+
+});  //Closes Doc Ready Function
 </script>
 
 
