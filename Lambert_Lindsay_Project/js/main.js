@@ -92,7 +92,8 @@
 			},
 			success:function(response) {
 				console.log("Test User");
-				if (response.error);
+				if (response.error){
+					alert(response.error);
 			} else {
 				window.location.assign('dashboard.html')
 			};
