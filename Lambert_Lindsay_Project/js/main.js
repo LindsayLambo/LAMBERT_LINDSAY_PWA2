@@ -101,8 +101,43 @@
 	});
 });
 
+
+/*  Logout  ----------------------------------------- */	
+
+	$('#logOut').click(function(e){
+		e.preventDefault();
+		$.get('xhr/logout.php', function(){
+			window.location.assign('index.html')
+		})
+	});
+	
+	
+	
+	
+	
+
 	
 })(jQuery); // end private scope
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
