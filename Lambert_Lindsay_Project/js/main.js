@@ -99,7 +99,7 @@
 			};
 		}
 	});
-
+});
 
 	
 })(jQuery); // end private scope
