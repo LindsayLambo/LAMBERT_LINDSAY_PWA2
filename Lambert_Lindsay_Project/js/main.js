@@ -76,7 +76,29 @@
 
 	*/
 	
-		
+/*  Login  ----------------------------------------- */		
+
+	$('#signinButton').click(function(){
+		var user = $('#user').val();
+		var pass = $('#pass').val();
+		console.log("This lets you know whether or not the password works.");
+		$.ajax({
+			url:'xhr/login.php',
+			type:'post',
+			dataType:'json',
+			data: {
+				username: user,
+				password: pass
+			},
+			success:function(response) {
+				console.log("Test User");
+				if (response.error);
+			} else {
+				window.location.assign('dashboard.html')
+			};
+		}
+	});
+
 
 	
 })(jQuery); // end private scope

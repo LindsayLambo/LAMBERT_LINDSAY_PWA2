@@ -68,7 +68,7 @@ nav {
 
 /* Styling of All Buttons in Site - So Far */
 
-button {
+#regisButton {
 
 	font-family: Avenir, Geneva, Helvetica;
 	background-color: #c57a72;
@@ -82,14 +82,16 @@ button {
 	
 }	
 
-/* Styling of Sign Up Button Only */
+/* Styling of Sign In Button Only */
 
-#signUpButton {
+#signinButton {
 	
 	width: 200px;
 	height: 30px;
 	text-shadow: 0px 1px 1px #ffffff;
 	border: 1px solid #c57a72;
+	margin: 10px;
+	padding: 5px;
 }	
 
 /* Styling for the Registration Form Only */
@@ -141,8 +143,8 @@ figure img {
 
 
 .tabs p {
-	padding: 10px;
-	margin: 10px;
+	padding: 5px;
+	margin: 5px;
 }
 
 
@@ -150,7 +152,7 @@ figure img {
 	width: 600px;
 	height: 60px;
 	display: inline;
-	padding: 15px;
+	padding: 5px;
 	
 }
 
@@ -161,7 +163,7 @@ figure img {
 	color: #c57a72;
 	text-decoration: none;
 	list-style-type: none;
-	padding: 10px;
+	padding: 5px;
 	margin: 5px;
 	border-radius: 5px;
 	box-shadow: 2px 2px 3px #555;
@@ -170,8 +172,8 @@ figure img {
 
 #projects, #users, #tasks {
 	display: inline;
-	margin: 10px;
-	padding: 10px;
+	margin: 5px;
+	padding: 5px;
 }
 
 
@@ -188,7 +190,7 @@ figure img {
 
 #modal {
 	width: 400px;
-	background: #b23358;
+	background: #cc9;
 	box-shadow: 2px 2px 3px #444;
 	border-radius: 5px;
 	overflow: hidden;
@@ -203,14 +205,18 @@ figure img {
 
 
 #modal .header {
-	background: #c57a72;
-	color: #352f22;
-	padding: 15px;
+	background: rgba(67, 57, 39, 2);
+	color: #ccc;
+	margin: 5px;
+	padding: 5px;
 }
 	
 
 #modal p {
-	margin: 15px;
+	background: #ccc;
+	color: rgba(67, 57, 39, 2);
+	margin: 5px;
+	padding: 5px;
 }
 
 
@@ -224,15 +230,17 @@ figure img {
 	border: 1px solid #352f22;
 	cursor: pointer;
 	background-color: #ccc;
+	color: rgba(67, 57, 39, 2);
 }
 
 form {
-	padding: 15px;
+	margin: 5px;
+	padding: 5px;
 }
 
 
 form.input {
-	padding: 15px;
+	padding: 10px;
 }
 
 .myStatus > input[type=radio]{
@@ -245,7 +253,7 @@ input[type=radio]:hover {
 }
 
 input[type=radio]:checked {
-	border: 2px solid ##352f22;
+	border: 2px solid #963;
 }
 
 .tooltip {
