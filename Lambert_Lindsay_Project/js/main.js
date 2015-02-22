@@ -111,10 +111,39 @@
 		})
 	});
 	
+
+/*  Registration  ----------------------------------------- */	
 	
-	
-	
-	
+	$('#register').on('click', function(){
+		var firstname = $('#first').val(),
+			lastname = $('#last').val(),
+			username = $('#userName').val(),
+			email = $('#email').val(),
+			password = $('#password').val();
+			console.log(firstname+' '+lastname+' '+username+' '+email+' '+password);
+			
+		$.ajax({
+			url:'xhr/register.php',	
+			type:'post',
+			dataType:'json',
+			data: {
+				firstname: firstname,
+				lastname: lastname,
+				username: username,
+				email: email,
+				password: password,
+			},
+			
+			success:function(response){
+				if (response.error){
+					alert(response.error);
+				} else {
+					window.location.assign('dashboard.html');
+				}
+			}
+		});
+	});
+			
 
 	
 })(jQuery); // end private scope
