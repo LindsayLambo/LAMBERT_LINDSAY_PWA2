@@ -65,17 +65,22 @@
 						
 		<form action="index.html">
 			<button>Sign Out</button>
-			<input type="hidden" name="signout" value="signout" />
+			<input type="hidden" name="signout" class="signOut" value="signout" />
 		</form>
         
         </nav>
         
-    <div>
+    <div class="welcome">
    		Here, you can manage your projects and keep up with your busy schedule! It is very easy to look through 		     	current, past, and present projects, as well as adding and deleting projects. You can edit them with ease 		and at the push of a button!
    
-    <p><a href="3" class="clickModal">Add New Project</a></p>
+    <p><a href="#" class="clickModal">Add New Project</a></p>
     
-    </div>  
+    </div> 
+    <div id="projectlist">
+    	<h1>Current Projects</h1>
+        <div class="projects">
+        </div>
+    </div>     
         
         
 		
@@ -92,14 +97,14 @@
                               
                
             	<form id="addform">
-                	<label>Pet Name: </label>
-                    	<input name="projName" type="text" id="projName"/>
+                	<label>Project Name: </label>
+                    	<input name="projectName" type="text" id="projectName"/>
 <br>
-					<label>Pet Description: </label>
-                    	<input name="projDesc" type="text" id="projDesc" /> <br>
+					<label>Project Description: </label>
+                    	<input name="projectDescription" type="text" id="projectDescription" /> <br>
                     
-                    <label>Pet Adoption Date: </label>
-                    	<input name="projDue" type="text" id="projDue" /> <br>
+                    <label>Project Date: </label>
+                    	<input name="projectDueDate" type="text" id="projectDueDate" /> <br>
                         
                      <label for="status">Select Status:</label>
 <br>
@@ -116,7 +121,7 @@
                      <label class="myStatus">
                      <input type="radio" name="status" id="complete">COMPLETE</label><br>
                      
-                     <input name="addbutton" type="button" id="addbutton" value="Add" />
+                     <input name="addButton" type="button" id="addButton" value="Add" />
                   
                   </form>   
                      

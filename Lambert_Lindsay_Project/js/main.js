@@ -112,6 +112,30 @@
 	});
 	
 
+/*  Registration Button on Index Page ----------------------------------------- */
+	
+	$('#regisButton').on('click', function(e){
+		e.preventDefault();
+		window.location.assign('registration.html');
+	});
+	
+	
+/*  Submit Button on Registration Page ----------------------------------------- */	
+
+	$('#register').on('click', function(e){
+		e.preventDefault();
+		window.location.assign('dashboard.html');
+	});
+
+
+/*  Sign Out Buttons on All Pages ----------------------------------------- */
+
+	$('.signOut').on('click', function(e){
+		e.preventDefault();
+		window.location.assign('index.html');
+	});
+
+
 /*  Registration  ----------------------------------------- */	
 	
 	$('#register').on('click', function(){
@@ -144,6 +168,95 @@
 		});
 	});
 			
+
+
+/*  Display Username  ----------------------------------------- */	
+
+	$.getJSON("xhr/check_login.php", function(data){
+		console.log(data);
+		$.each(data, function(key, val){
+			console.log(val.first_name);
+			$(".userid").html("Welcome User: "+ val.first_name);
+		})
+	});
+	
+	
+/*  Modal Add Project Button  ----------------------------------------- */	
+
+
+	$('#addButton').on('click', function(){
+		var projname = $('#projectName').val(),
+			projDesc = $('#projectDescription').val(),
+			projDue = $('#projectDueDate').val(),
+			status = $('input[name="status"]:checked').prop("id");
+			
+			$.ajax({
+				url:"xhr/new_project.php",
+				type:"post",
+				dataType:"json",
+				data: {
+					projectName: projName,
+					projectDescription: projDesc,
+					dueDate: projDue,
+					status: status
+				},
+				success: function(response){
+					console.log('Testing');
+					if (response.error){
+						alert(response.error);
+					} else {
+						window.location.assign("projects.html");
+					};
+				}
+			});
+	});
+						
+
+
+/*  Display and Delete Page: Projects  ----------------------------------------- */	
+	
+	var projects = function(){
+		$.ajax({
+			url: 'xhr/get_projects.php',
+			type: 'get',
+			dataType: 'json',
+			success: function(response){
+				if(response.error){
+					console.log(response.error);
+				} else {
+					for(var i=0, j=response.projects.length; i < j; i++){
+						var result = response.projects[i];
+						
+						$(".projects").append(
+						'div style="border:1px solid black">' + " <input class= 'projectid' type= 'hidden' value=' " + result.id + " ' > " + " Project Name: " + result.projectName + "<br>" + " Project Description: " + result.projectDescription + "<br>" + "Project Status: " + result.status + "<br>" + '<button class="deletebtn">Delete</button>' + '<button class="editbtn">Edit</button>' + '</div> <br>'
+						);
+					};
+					$('.deletebtn').on('click', function(e){
+						console.log('testing delete');
+						$.ajax({
+							url:'xhr/delete_project.php',
+							data: {
+								projectID: result.id
+							},
+							type:'POST',
+							dataType:'json',
+							success: function(response){
+								console.log('Testing');
+								if(response.error){
+									alert(response.error);
+								} else {
+									//console.log(result.id);
+									window.location.assign("projects.html");
+								};
+							}
+						});
+					});
+				}
+			}
+		})
+	}
+	projects();
+							
 
 	
 })(jQuery); // end private scope
