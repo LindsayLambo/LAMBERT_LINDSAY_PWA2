@@ -136,6 +136,19 @@
 	});
 
 
+
+/*  Project Button on Dashboard Pages ----------------------------------------- */
+
+	$('#projectsButton').on('click', function(e){
+		e.preventDefault();
+		window.location.assign('projects.html');
+	});
+
+
+
+
+
+
 /*  Registration  ----------------------------------------- */	
 	
 	$('#register').on('click', function(){
@@ -195,7 +208,7 @@
 				type:"post",
 				dataType:"json",
 				data: {
-					projectName: projName,
+					projectName: projname,   //Needs to match your variable Name on line 201
 					projectDescription: projDesc,
 					dueDate: projDue,
 					status: status
