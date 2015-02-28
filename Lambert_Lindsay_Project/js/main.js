@@ -241,7 +241,7 @@
 						var result = response.projects[i];
 						
 						$(".projects").append(
-						'<div style="border:1px solid black">' + " <input class= 'projectid' type= 'hidden' value=' " + result.id + " ' > " + " Project Name: " + result.projectName + "<br>" + " Project Description: " + result.projectDescription + "<br>" + "Project Status: " + result.status + "<br>" + '<button class="deletebtn">Delete</button>' + '<button class="editbtn">Edit</button>' + '</div> <br>');
+						'<div id="sortable" class="ui-state-default" style="border:1px solid black">' + " <input class= 'projectid' type= 'hidden' value=' " + result.id + " 		' > " + " Project Name: " + result.projectName + "<br>" + " Project Description: " + result.projectDescription + "<br>" + "Project Status: " + result.status + "<br>" + '<button class="deletebtn">Delete</button>' + '<button class="editbtn">Edit</button>' + '</div> <br>');
 					};
 					$('.deletebtn').on('click', function(e){
 						console.log('testing delete');
@@ -283,6 +283,14 @@ $(function() {
       buttonText: "Select date"
     });
   });
+ 
+/*  Sortable Projects: Projects  ----------------------------------------- */	
+ 
+  
+  
+$( "#sortable" ).sortable();
+$( "#sortable" ).disableSelection();
+  
 							
 
 	
