@@ -87,7 +87,12 @@
         <div class="projects" id="sortable">
         </div>
     </div>     
-        
+     
+    <p><label for="amount">Donation amount ($50 increments):</label>
+    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+    </p>    
+    <div id="slider"></div>
+    <input name="donations" type="button" id="sendDonation" value="Send" />
         
 		
 	
@@ -116,16 +121,16 @@
 <br>
 
 					 <label class="myStatus">
-                     <input type="radio" name="status" id="urgent">URGENT!</label>
+                     <input type="radio" name="status" class="selectable" id="urgent">URGENT!</label>
                      
                      <label class="myStatus">
-                     <input type="radio" name="status" id="normal">Normal</label>
+                     <input type="radio" name="status" class="selectable" id="normal">Normal</label>
                      
                      <label class="myStatus">
-                     <input type="radio" name="status" id="delayed">Delayed!</label>
+                     <input type="radio" name="status" class="selectable" id="delayed">Delayed!</label>
                      
                      <label class="myStatus">
-                     <input type="radio" name="status" id="complete">COMPLETE</label><br>
+                     <input type="radio" name="status" class="selectable" id="complete">COMPLETE</label><br>
                      
                      <input name="addButton" type="button" id="addButton" value="Add" />
                   

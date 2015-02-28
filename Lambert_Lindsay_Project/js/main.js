@@ -137,15 +137,20 @@
 
 
 
-/*  Project Button on Dashboard Pages ----------------------------------------- */
+/*  Project Button on Dashboard Page ----------------------------------------- */
 
 	$('#projectsButton').on('click', function(e){
 		e.preventDefault();
 		window.location.assign('projects.html');
 	});
 
+/*  Send Donation Button on Project Page ----------------------------------------- */
 
 
+	$('#sendDonation').on('click', function(e){
+		e.preventDefault();
+		window.location.assign('projects.html');
+	});
 
 
 
@@ -241,9 +246,17 @@
 						var result = response.projects[i];
 						
 						$(".projects").append(
-						'<div id="sortable" class="ui-state-default" style="border:1px solid black">' + " <input class= 'projectid' type= 'hidden' value=' " + result.id + " 		' > " + " Project Name: " + result.projectName + "<br>" + " Project Description: " + result.projectDescription + "<br>" + "Project Status: " + result.status + "<br>" + '<button class="deletebtn">Delete</button>' + '<button class="editbtn">Edit</button>' + '</div> <br>');
+						'<div id="sortable" class="ui-state-default" style="border:1px solid black">' + 
+						" <input class= 'projectid' type= 'hidden' value=' " + result.id + " ' > " + 
+						" Project Name: " + result.projectName + "<br>" + 
+						"Project Description: " + result.projectDescription + "<br>" + 
+						"Project Status: " + result.status + "<br>" + 
+						'<button class="deletebtn">Delete</button>' + 
+						'<button class="editbtn">Edit</button>' + '</div> <br>'
+						);
 					};
 					$('.deletebtn').on('click', function(e){
+						var pid = $(this).parent().find(".projectid").val();
 						console.log('testing delete');
 						$.ajax({
 							url:'xhr/delete_project.php',
@@ -258,6 +271,7 @@
 									alert(response.error);
 								} else {
 									//console.log(result.id);
+									$('.deletebtn').animate.slideDown('slow');
 									window.location.assign("projects.html");
 								};
 							}
@@ -273,16 +287,9 @@ projects();
 /*  Datepicker: Projects Modal ----------------------------------------- */	
 
 
+$( ".datepicker" ).datepicker();
 
 
-$(function() {
-    $( ".datepicker" ).datepicker({
-      showOn: "button",
-      buttonImage: "images/calendar.gif",
-      buttonImageOnly: true,
-      buttonText: "Select date"
-    });
-  });
  
 /*  Sortable Projects: Projects  ----------------------------------------- */	
  
@@ -290,10 +297,33 @@ $(function() {
   
 $( "#sortable" ).sortable();
 $( "#sortable" ).disableSelection();
+
+
+/*  Selectable Projects: Projects  ----------------------------------------- */	
   
 							
+$( ".selectable" ).selectable();
 
+
+
+/*  Donations Slider: Projects  ----------------------------------------- */	
+
+
+$(function() {
+    $( "#slider" ).slider({
+      value:100,
+      min: 0,
+      max: 500,
+      step: 50,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.value );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
+  });
 	
+
+
 })(jQuery); // end private scope
 
 

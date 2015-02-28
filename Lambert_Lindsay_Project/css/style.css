@@ -280,4 +280,19 @@ p#projects {
 #sortable li span { position: absolute; margin-left: -1.3em; }
 
 
+.selectable {
+	background-color: #FC0;
+	color: #FFF;
+	border: 2px solid #FFF;
+}
+
+
+.deleteBtn {
+	margin: 0;
+	width: 100%;
+	background-color: inherit;
+	display: none;
+}
+
+
 
