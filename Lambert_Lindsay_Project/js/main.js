@@ -256,7 +256,6 @@
 						);
 					};
 					$('.deletebtn').on('click', function(e){
-						var pid = $(this).parent().find(".projectid").val();
 						console.log('testing delete');
 						$.ajax({
 							url:'xhr/delete_project.php',
@@ -271,7 +270,6 @@
 									alert(response.error);
 								} else {
 									//console.log(result.id);
-									$('.deletebtn').animate.slideDown('slow');
 									window.location.assign("projects.html");
 								};
 							}
@@ -321,7 +319,17 @@ $(function() {
     });
     $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
   });
-	
+
+
+/*  AutoComplete: All Pages  ----------------------------------------- */	
+
+
+
+$( ".autoComplete" ).autocomplete({
+  autoFocus: true
+});
+
+
 
 
 })(jQuery); // end private scope
